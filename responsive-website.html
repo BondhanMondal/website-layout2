@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Responsiveness</title>
+</head>
+<style>
+    body{
+        max-width: 1240px;
+        margin: 0 auto;
+        border: 1px solid mediumspringgreen;
+    }
+    h2{
+        font-size: 10vw;
+    }
+    img{
+        width: 100%;
+    }
+    
+    .two-part-container{
+        display: flex;
+        
+    }
+    .split{
+        width: 50%;
+    }
+    .split img{
+        width: 100%;
+    }
+    @media screen and (max-width: 576px){
+        .two-part-container{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .split{
+            width: 100%;
+        }
+        
+    }
+</style>
+<body>
+    <section>
+        <!-- 1. viewport meta tag  -->
+        <!-- 2. css relative measuring unit -->
+        <h2>Relative measuring unit</h2>
+        <img src="./images/tiger.jpg" alt="">
+    </section>
+    <!-- 5. split screen with flex  -->
+    <section>
+        <h4>Two Part</h4>
+        <div class="two-part-container">
+            <div class="split">
+                <img src="./images/food.jpg" alt="">
+            </div>
+            <div class="split">
+                <img src="./images/tiger.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 1. viewport meta tag
+    2. CSS Relative unit
+    3. Responsive Image (Fluid Image)
+    4. body max-with and margin auto
+    5. Responsive Split screen using flex (2 column section)
+    6. Grid responsive (multi column)
+    7. Responsive Menu (Bootstrap responsive)-- Future -->
+</body>
+</html>
